@@ -2,7 +2,7 @@
 # Name: github.com/batimusprime/
 # Date: 4/16/18
 # Program: ASCII showcase
-# Purpose: Display all possible font combinations
+# Purpose: Display all possible font combinations for pyfiglet
 #################
 
 import sys
@@ -36,5 +36,5 @@ for fontCount in fonts.fonts:
         for highlight_colors in fonts.highlights:
             
             #do the printing
-            sys.stdout.write(str(cprint(figlet_format(text, font=fontCount),
-               colors, highlight_colors, attrs=['dark'])))
+            cprint(figlet_format(text, font=fontCount),
+               colors, highlight_colors, attrs=['dark'])
