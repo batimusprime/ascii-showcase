@@ -38,3 +38,7 @@ for fontCount in fonts.fonts:
             #do the printing
             cprint(figlet_format(text, font=fontCount),
                colors, highlight_colors, attrs=['dark'])
+            try:
+                input("Press enter to continue")
+            except SyntaxError:
+                pass
