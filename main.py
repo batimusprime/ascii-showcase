@@ -6,26 +6,23 @@
 #################
 
 import sys
-import time
 
 #neccessary libraries
-from colorama import init
+
 from termcolor import cprint 
 from pyfiglet import figlet_format
 
 #imports var fonts, avail_colors, highlights
 import fonts
 
-#define method to clear terminal line
+#clear terminal line
 def restart_line():
     sys.stdout.write('\r')
     sys.stdout.flush()
-#get sample text from user
-#text = raw_input('Enter text to display: ')
 
-#for testing purposes, remove after
-text = 'Hell Oworld'
-doc = open('doc.txt', 'w')
+#get sample text from user
+text = input('Enter text to display: ')
+
 #loop through font names
 for fontCount in fonts.fonts:
     
@@ -37,8 +34,9 @@ for fontCount in fonts.fonts:
             
             #do the printing
             cprint(figlet_format(text, font=fontCount),
-               colors, highlight_colors, attrs=['dark'])
+               colors, highlight_colors, attrs=['dark'])    
             try:
                 input("Press enter to continue")
-            except SyntaxError:
-                pass
+  
+            except SyntaxError as err:
+                print("error: {0}".format(err))
