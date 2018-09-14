@@ -1,5 +1,9 @@
 # Ascii Showcase
 ## Demonstrating combinations of termcolor and pyfiglet
+
+### Application
+`python3 main.py`
+
 ### Dependencies:
 * Termcolor: ANSII Color formatting for output in terminal
 &nbsp;&nbsp;&nbsp;https://pypi.org/project/termcolor/ 
